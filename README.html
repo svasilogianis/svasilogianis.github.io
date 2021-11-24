@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="pandoc.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="d-printable-parametric-cubbies">3D Printable Parametric Cubbies</h1>
+<div class="parts">
+<dl>
+<dt>Bottom Part:</dt>
+<dd><a href="pictures/side.png"><img src="pictures/bottom.png" title="Bottom part" alt="Bottom Part" /></a>
+</dd>
+<dt>Side Part:</dt>
+<dd><a href="pictures/side.png"><img src="pictures/side.png" title="Side part" id="fig:side" alt="Side" /></a>
+</dd>
+</dl>
+</div>
+<p>3D printable parametric cubbies to store your 3D things. There are two distinct parts – a <code>bottom</code> and a <code>side</code> – that are generated to the dimensions of your things, then 3D printed and assembled into modular storage units.</p>
+<h2 id="pictures">Pictures</h2>
+<div class="figs">
+<figure>
+<img src="pictures/bottom-printed-thumbnail.jpg" alt="Bottom part (printed)" /><figcaption aria-hidden="true"><a href="pictures/bottom-printed-full.jpg" title="Bottom part, printed (full resolution)">Bottom part (printed)</a></figcaption>
+</figure>
+<figure>
+<img src="pictures/side-printed-thumbnail.jpg" title="Side part, printed" alt="Side part (printed)" /><figcaption aria-hidden="true"><a href="pictures/side-printed-full.jpg" title="Side part, printed (full resolution)">Side part (printed)</a></figcaption>
+</figure>
+<figure>
+<img src="pictures/smurfstrusion-thumbnail.jpg" alt="The Smurftruder with a fresh print" /><figcaption aria-hidden="true"><a href="pictures/smurfstrusion-full.jpg" title="Smurfstrusion (full resolution)">The Smurftruder with a fresh print</a></figcaption>
+</figure>
+<figure>
+<img src="pictures/cubbies-mounted-empty-thumbnail.jpg" alt="Mounted Cubbies (empty)" /><figcaption aria-hidden="true"><a href="cubbies-mounted-empty-full.jpg" title="Mounted Cubbies (full resolution)">Mounted Cubbies (empty)</a></figcaption>
+</figure>
+<figure>
+<img src="pictures/cubbies-mounted-empty-angle-view-thumbnail.jpg" alt="Mounted Cubbies (empty, viewed from an angle)" /><figcaption aria-hidden="true"><a href="pictures/cubbies-mounted-empty-angle-view-full.jpg" title="Empty cubbies, mounted (full resolution)">Mounted Cubbies (empty, viewed from an angle)</a></figcaption>
+</figure>
+<figure>
+<img src="pictures/cubbies-full-thumbnail.jpg" alt="Mounted Cubbies (filled)" /><figcaption aria-hidden="true"><a href="pictures/cubbies-full-full.jpg" title="Mounted cubbies, filled (full resolution)">Mounted Cubbies (filled)</a></figcaption>
+</figure>
+<figure>
+<img src="pictures/cubby-development-thumbnail.jpg" alt="Cubby Development" /><figcaption aria-hidden="true"><a href="pictures/cubby-development-full.jpg" title="Cubby Development (full resolution)">Cubby Development</a></figcaption>
+</figure>
+</div>
+<h2 id="instructions">Instructions</h2>
+<h3 id="do-not-scale-in-a-slicer">🚫 Do NOT Scale in a Slicer 🚫</h3>
+<p>Your distribution of this project may have included STL files; these are either samples or test prints to verify the fit of the dovetail joints. Cubbies are meant to be generated in one of the following ways:</p>
+<ul>
+<li><p>Using the Thingiverse Customizer</p></li>
+<li><p>Using <code>Openscad</code> – either by using its builtin customizer (choose <code>Window -&gt; Customizer</code> from the menu bar if it is not visible), or by modifying the variables at the top of the <code>cubbies.scad</code> file.</p></li>
+<li><p>There are two scripts for generating cubbies from the commandline: <code>shopenscad.sh</code> (run <code>./shopenscad.sh -h</code> for details) generates a single model, and <code>cubbies.sh</code> (run <code>./cubbies.sh -h</code> for details) can generate entire sets of cubbies.</p></li>
+</ul>
+<p>For a single cubby, you will need to print the side piece twice, and the bottom piece once. To add additional cubbies, print one bottom and one side. The bottom and side pieces can be flipped upside down so that the bottom piece’s tabs fit into the extra unused holes of the side piece. You can also use this to control whether the screw tabs end up on the inside or outside of the cubby.</p>
+<p>You can print tolerance test fit pieces (which are the minimum material necessary to confirm that the pieces will fit with your printer and slicer settings). These test pieces were generated using <code>dovetail_test_fits.sh</code>, which you can use to generate your own at different tolerances (run <code>dovetail_test_fits.sh -h</code> for details). You can also generate them in <code>OpenSCAD</code> by specifying either <code>male_tabs</code> or <code>female_tabs</code> for the <code>part</code> paramaters (the <code>cubby_depth</code> paramater is respected as the length of those dovetail test pieces).</p>
+<figure>
+<img src="pictures/dovetail_test_fit-thumbnail.jpg" alt="Dovetail Test Fit" /><figcaption aria-hidden="true"><a href="pictures/dovetail_test_fit.jpg-full" title="Dovetail Test Fit (full resolution)">Dovetail Test Fit</a></figcaption>
+</figure>
+<h2 id="source-repository">Source Repository</h2>
+<p>The source repository is a Git repository that is hosted both on a read-only HTTPS URL and on a read-write SSH url.</p>
+<p>You can push to the read-write URL simply without creating any user account. You only need to generate a SSH public key on your own system.</p>
+<h3 id="read-only-clone">Read-Only Clone</h3>
+<p>The read-only clone command is:</p>
+<pre><code>git clone --recurse-submodules https://git.cryptonomic.net/cubbies.git</code></pre>
+<h3 id="read-write-clone">Read-Write Clone</h3>
+<p>To clone from the read-write URL, you first need to have your own ssh identity. Then you can run <code>git clone</code>.</p>
+<pre><code># Generate an SSH key if needed
+command -v ssh-keygen || { echo Please Install OpenSSH; exit; }
+[ -d ~/.ssh ] || mkdir ~/.ssh
+[ -e ~/.ssh/id_ed25519.pub ] || ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519 -N 
+
+# Add the public key for cryptonomic.net
+echo cryptonomic.net ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIPK7K8KsygvXtjw0yH4h43bwBGKq9oWBdCa1eY5rzT5D &gt;&gt; ~/.ssh/known_hosts 
+
+# Perform the clone
+git clone --recurse-submodules ssh://d@cryptonomic.net:public_git/cubbies.git</code></pre>
+<p>You can push your changes back simply:</p>
+<pre><code>git add .
+git commit -a -m &#39;commit message&#39;
+git push</code></pre>
+<h2 id="cubbies-on-the-web">Cubbies on the Web</h2>
+<ul>
+<li>thingiverse</li>
+<li>thangs</li>
+<li>cults3d</li>
+</ul>
+<h2 id="dependenciescredits">Dependencies/Credits</h2>
+<ul>
+<li><a href="https://openscad.org" title="OpenSCAD">OpenSCAD</a></li>
+<li><a href="https://github.com/revarbat/BOSL" title="Belfry OpenSCAD Library">Belfry OpenSCAD Library</a></li>
+</ul>
+<h2 id="contributions">Contributions</h2>
+<p>I could use some money right now:</p>
+<ul>
+<li>PayPal: <a href="https://paypal.me/svasilogianis" class="uri">https://paypal.me/svasilogianis</a></li>
+<li>Venmo: <a href="https://venmo.com/u/Steven-Vasilogianis" class="uri">https://venmo.com/u/Steven-Vasilogianis</a></li>
+<li>CashApp: <a href="https://cash.app/$svasi" class="uri">https://cash.app/$svasi</a></li>
+</ul>
+<p>If someone prints cubbies and takes better pictures, I would love to replace the pictures in this document. Please let me know.</p>
+<h2 id="gplv3-license">GPLv3 License</h2>
+<p>Copyright (C) Steven Vasilogianis</p>
+<p>This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.</p>
+</body>
+</html>
