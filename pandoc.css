@@ -342,16 +342,32 @@ table td {
   }
 }
 
+@media screen and (min-width: 700px) {
+    .parts dt {
+        text-align: right;
+        height: 400px;              /* side.png and bottom.png are 400px tall */
+        padding-right: 1em;
+    }
+
+    .parts dl {
+        display: flex;
+        flex-flow: row wrap;
+        max-height: 420px;
+    }
+
+    .parts dd {
+        margin: 0;
+        padding: 4px;
+        min-height: 400px;
+    }
+}
+
 .figs { display: inline-block; }
 
 .figs figure { width: 50%; float: left; margin: 0; text-align: center; padding: 0 }
 
-.parts { display: block; text-align:center; margin-bottom: 2em; }
-
-.parts * { display: inline; }
-
 figcaption a { text-decoration: underline; }
 
-
 /* css selectors add value */
-#contributions + p strong { font-size: 36pt; }
+#contributions + p strong { font-size: 36pt; 
+                          }
