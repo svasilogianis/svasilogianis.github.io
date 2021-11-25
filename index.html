@@ -12,12 +12,8 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
-    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
   </style>
   <link rel="stylesheet" href="pandoc.css" />
-  <!--[if lt IE 9]>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
-  <![endif]-->
 </head>
 <body>
 <h1 id="d-printable-parametric-cubbies">3D Printable Parametric Cubbies</h1>
@@ -35,25 +31,25 @@
 <h2 id="pictures">Pictures</h2>
 <div class="figs">
 <figure>
-<img src="pictures/bottom-printed-thumbnail.jpg" alt="Bottom part (printed)" /><figcaption aria-hidden="true"><a href="pictures/bottom-printed-full.jpg" title="Bottom part, printed (full resolution)">Bottom part (printed)</a></figcaption>
+<img src="pictures/bottom-printed-thumbnail.jpg" alt="" /><figcaption><a href="pictures/bottom-printed-full.jpg" title="Bottom part, printed (full resolution)">Bottom part (printed)</a></figcaption>
 </figure>
 <figure>
-<img src="pictures/side-printed-thumbnail.jpg" title="Side part, printed" alt="Side part (printed)" /><figcaption aria-hidden="true"><a href="pictures/side-printed-full.jpg" title="Side part, printed (full resolution)">Side part (printed)</a></figcaption>
+<img src="pictures/side-printed-thumbnail.jpg" title="Side part, printed" alt="" /><figcaption><a href="pictures/side-printed-full.jpg" title="Side part, printed (full resolution)">Side part (printed)</a></figcaption>
 </figure>
 <figure>
-<img src="pictures/smurfstrusion-thumbnail.jpg" alt="The Smurftruder with a fresh print" /><figcaption aria-hidden="true"><a href="pictures/smurfstrusion-full.jpg" title="Smurfstrusion (full resolution)">The Smurftruder with a fresh print</a></figcaption>
+<img src="pictures/smurfstrusion-thumbnail.jpg" alt="" /><figcaption><a href="pictures/smurfstrusion-full.jpg" title="Smurfstrusion (full resolution)">The Smurftruder with a fresh print</a></figcaption>
 </figure>
 <figure>
-<img src="pictures/cubbies-mounted-empty-thumbnail.jpg" alt="Mounted Cubbies (empty)" /><figcaption aria-hidden="true"><a href="pictures/cubbies-mounted-empty-full.jpg" title="Mounted Cubbies (full resolution)">Mounted Cubbies (empty)</a></figcaption>
+<img src="pictures/cubbies-mounted-empty-thumbnail.jpg" alt="" /><figcaption><a href="pictures/cubbies-mounted-empty-full.jpg" title="Mounted Cubbies (full resolution)">Mounted Cubbies (empty)</a></figcaption>
 </figure>
 <figure>
-<img src="pictures/cubbies-mounted-empty-angle-view-thumbnail.jpg" alt="Mounted Cubbies (empty, viewed from an angle)" /><figcaption aria-hidden="true"><a href="pictures/cubbies-mounted-empty-angle-view-full.jpg" title="Empty cubbies, mounted (full resolution)">Mounted Cubbies (empty, viewed from an angle)</a></figcaption>
+<img src="pictures/cubbies-mounted-empty-angle-view-thumbnail.jpg" alt="" /><figcaption><a href="pictures/cubbies-mounted-empty-angle-view-full.jpg" title="Empty cubbies, mounted (full resolution)">Mounted Cubbies (empty, viewed from an angle)</a></figcaption>
 </figure>
 <figure>
-<img src="pictures/cubbies-full-thumbnail.jpg" alt="Mounted Cubbies (filled)" /><figcaption aria-hidden="true"><a href="pictures/cubbies-full-full.jpg" title="Mounted cubbies, filled (full resolution)">Mounted Cubbies (filled)</a></figcaption>
+<img src="pictures/cubbies-full-thumbnail.jpg" alt="" /><figcaption><a href="pictures/cubbies-full-full.jpg" title="Mounted cubbies, filled (full resolution)">Mounted Cubbies (filled)</a></figcaption>
 </figure>
 <figure>
-<img src="pictures/cubby-development-thumbnail.jpg" alt="Cubby Development" /><figcaption aria-hidden="true"><a href="pictures/cubby-development-full.jpg" title="Cubby Development (full resolution)">Cubby Development</a></figcaption>
+<img src="pictures/cubby-development-thumbnail.jpg" alt="" /><figcaption><a href="pictures/cubby-development-full.jpg" title="Cubby Development (full resolution)">Cubby Development</a></figcaption>
 </figure>
 </div>
 <h2 id="instructions">Instructions</h2>
@@ -67,7 +63,7 @@
 <p>For a single cubby, you will need to print the side piece twice, and the bottom piece once. To add additional cubbies, print one bottom and one side. The bottom and side pieces can be flipped upside down so that the bottom piece’s tabs fit into the extra unused holes of the side piece. You can also use this to control whether the screw tabs end up on the inside or outside of the cubby.</p>
 <p>You can print tolerance test fit pieces (which are the minimum material necessary to confirm that the pieces will fit with your printer and slicer settings). These test pieces were generated using <code>dovetail_test_fits.sh</code>, which you can use to generate your own at different tolerances (run <code>dovetail_test_fits.sh -h</code> for details). You can also generate them in <code>OpenSCAD</code> by specifying either <code>male_tabs</code> or <code>female_tabs</code> for the <code>part</code> paramaters (the <code>cubby_depth</code> paramater is respected as the length of those dovetail test pieces).</p>
 <figure>
-<img src="pictures/dovetail_test_fit-thumbnail.jpg" alt="Dovetail Test Fit" /><figcaption aria-hidden="true"><a href="pictures/dovetail_test_fit.jpg-full" title="Dovetail Test Fit (full resolution)">Dovetail Test Fit</a></figcaption>
+<img src="pictures/dovetail_test_fit-thumbnail.jpg" alt="" /><figcaption><a href="pictures/dovetail_test_fit.jpg-full" title="Dovetail Test Fit (full resolution)">Dovetail Test Fit</a></figcaption>
 </figure>
 <h2 id="source-repository">Source Repository</h2>
 <p>The source repository is a Git repository that is hosted both on a read-only HTTPS URL and on a read-write SSH url.</p>
@@ -103,7 +99,7 @@ git push</code></pre>
 <li><a href="https://github.com/revarbat/BOSL" title="Belfry OpenSCAD Library">Belfry OpenSCAD Library</a></li>
 </ul>
 <h2 id="contributions">Contributions</h2>
-<p>I could use some money right now:</p>
+<p><img src="pictures/kenneth-copeland.jpg" /> <img src="pictures/basket.jpg" /></p>
 <ul>
 <li>PayPal: <a href="https://paypal.me/svasilogianis" class="uri">https://paypal.me/svasilogianis</a></li>
 <li>Venmo: <a href="https://venmo.com/u/Steven-Vasilogianis" class="uri">https://venmo.com/u/Steven-Vasilogianis</a></li>
