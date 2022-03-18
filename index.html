@@ -35,6 +35,23 @@
 </dl>
 </div>
 <p>3D printable parametric cubbies to store your 3D things. There are two distinct shapes — a <code>bottom</code> and a <code>side</code> — that are generated to the dimensions of your things, 3D printed, then assembled into modular storage units. The parts are optimized for printing by using <a href="https://github.com/revarbat/BOSL2/wiki/walls.scad#module-sparse_strut">sparse structures</a> (to save material) that lay flat on the print bed (for ease of printing).</p>
+<h2 id="quick-start">Quick Start</h2>
+<p>This is how I would use this software:</p>
+<h3 id="generate-from-console">Generate From Console</h3>
+<pre class="shell"><code>~/tmp$ git clone --recurse-submodules https://git.cryptonomic.net/cubbies.git
+~/tmp$ cd cubbies
+~/tmp/cubbies$ ./cubbies.sh 164 94 34
+~/tmp/cubbies$ Ultimaker_Cura-4.10.0.AppImage $(pwd)/*.stl</code></pre>
+<p>I omitted the output of the commands, but the cubies.sh script generated two stl files: bottom-34-164-94-5-5-0-10-5-0.5-true.stl and side-34-164-94-5-5-0-10-5-0.5-true.stl, then opened in Cura (my slicer).</p>
+<h3 id="generate-with-openscad-customizer">Generate with OpenSCAD customizer</h3>
+<p>You can also generate models using the OpenSCAD’s builtin customizer:</p>
+<pre class="shell"><code>~/tmp$ git clone --recurse-submodules https://git.cryptonomic.net/cubbies.git
+[snip git clone output]
+~/tmp$ cd cubbies
+~/tmp/cubbies$ OpenSCAD-2021.04.13.ai7733-2021.04.13.ai7733-x86_64.AppImage cubbies.scad</code></pre>
+<p>In the last line, you may need to replace the OpenSCAD-2021.04.13.ai7733-2021.04.13.ai7733-x86_64.AppImage with wherever the OpenSCAD executable is on your system. Once you’re in OpenSCAD, if you do not have the customizer panel, on the top menu bar choose Window, and Hide Customizer should appear without a check (<code>[ ] Hide Customzer</code>)</p>
+<h3 id="thingiverse-customizer">Thingiverse Customizer</h3>
+<p>It also works in the thingiverse customizer, however, if you go that route there is a wait time to get your models.</p>
 <h2 id="pictures">Pictures</h2>
 <div class="figs">
 <figure>
